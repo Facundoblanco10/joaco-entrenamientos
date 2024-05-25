@@ -1,0 +1,22 @@
+---
+export interface Props {
+    trainerName: string;
+    trainerImage: string;
+    story: string;
+}
+const { trainerName, trainerImage, story } = Astro.props;
+---
+
+<section class="flex flex-wrap">
+    <div class="w-full lg:w-1/2 p-4">
+        <img
+            src={'/images/' + trainerImage}
+            alt={trainerName}
+            class="w-full rounded-lg shadow-lg"
+        />
+    </div>
+    <div class="w-full lg:w-1/2 p-4 flex flex-col justify-center text-white">
+        <h2 class="text-3xl font-semibold">Meet {trainerName}</h2>
+        <p class="mt-4">{story}</p>
+    </div>
+</section>

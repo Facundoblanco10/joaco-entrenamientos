@@ -1,0 +1,15 @@
+---
+export interface Props {
+  qualifications: string[];
+}
+const { qualifications } = Astro.props;
+---
+
+<section class="text-white p-4">
+  <h2 class="text-3xl font-semibold">Qualifications</h2>
+  <ul class="mt-4 list-disc list-inside">
+    {qualifications.map((qualification) => (
+      <li class="">{qualification}</li>
+    ))}
+  </ul>
+</section>

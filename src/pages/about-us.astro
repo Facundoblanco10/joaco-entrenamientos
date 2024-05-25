@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import TrainerStory from '../components/TrainerStory.astro';
+import PhilosophyApproach from '../components/PhilosophyApproach.astro';
+import Qualifications from '../components/Qualifications.astro';
+import Testimonials from '../components/Testimonials.astro';
+import HeroFooter from '../components/HeroFooter.astro';
+---
+
+<Layout title="About Joaco">
+    <main>
+        <!-- Hero Section -->
+        <Hero
+            callToAction="Conoce a Joaco"
+            buttonText="Contacta con nosotros"
+            companyName="Joaco Entrenamientos"
+        />
+        <!-- Trainer's Story -->
+        <TrainerStory 
+            trainerName="Joaco"
+            trainerImage="gym-instructor.jpg"
+            story="Joaco es un entrenador personal certificado con más de X años de experiencia ayudando a los clientes a alcanzar sus metas de fitness. Con una pasión por la salud y el bienestar, Joaco ofrece programas de entrenamiento personalizados adaptados a las necesidades de cada individuo."
+        />
+        <!-- Philosophy and Approach -->
+        <PhilosophyApproach 
+            philosophyImage="dumbbells.jpg"
+            philosophy="En Joaco Entrenamientos, creemos en un enfoque holístico del fitness. Nuestros programas están diseñados no solo para mejorar tu fuerza física sino también para mejorar tu bienestar general."
+        />
+        <!-- Qualifications and Certifications -->
+        <Qualifications 
+            qualifications={[
+                "Certified Personal Trainer (CPT) from Certification Body",
+                "Bachelor's Degree in Relevant Field",
+                "Specialized in Specialization",
+                "Other Relevant Certification or Qualification"
+            ]}
+        />
+        <!-- Testimonials -->
+        <Testimonials />
+        <!-- Call to Action -->
+        <HeroFooter callToAction="Listo para empezar tu viaje de fitness?" />
+    </main>
+</Layout>

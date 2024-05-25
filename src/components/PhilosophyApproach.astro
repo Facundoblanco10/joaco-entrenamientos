@@ -1,0 +1,21 @@
+---
+export interface Props {
+    philosophyImage: string;
+    philosophy: string;
+}
+const { philosophyImage, philosophy } = Astro.props;
+---
+
+<section class="flex flex-wrap p-4">
+    <div class="w-full lg:w-1/2 lg:order-2">
+        <img
+            src={'/images/' + philosophyImage}
+            alt="Our Philosophy"
+            class="w-full rounded-lg shadow-lg"
+        />
+    </div>
+    <div class="w-full lg:w-1/2 lg:order-1 flex flex-col justify-center text-white">
+        <h2 class="text-3xl font-semibold">Our Philosophy</h2>
+        <p class="mt-4">{philosophy}</p>
+    </div>
+</section>
