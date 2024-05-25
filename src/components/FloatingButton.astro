@@ -1,0 +1,53 @@
+---
+const phoneNumber = '+59899231350'; // Reemplaza con tu número de teléfono de WhatsApp
+const message = 'Hola,%20me%20gustaría%20más%20información.';
+---
+
+<a
+    href={`https://wa.me/${phoneNumber}?text=${message}`}
+    class="fixed bottom-5 right-5 rounded-full p-3"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <img src="/images/wpp.svg" alt="whatsapp" class="w-16 h-16">
+</a>
+
+<style is:global>
+    .fixed {
+        position: fixed;
+    }
+    .bottom-4 {
+        bottom: 1rem;
+    }
+    .right-4 {
+        right: 1rem;
+    }
+    .bg-green-500 {
+        background-color: #23fa47;
+    }
+    .text-white {
+        color: #fff;
+    }
+    .rounded-full {
+        border-radius: 9999px;
+    }
+    .p-3 {
+        padding: 0.75rem;
+    }
+    .shadow-lg {
+        box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+    .hover\:bg-green-400:hover {
+        background-color: #22c55e;
+    }
+    .transition {
+        transition-property: background-color, border-color, color, fill, stroke, opacity,
+            box-shadow, transform;
+        transition-duration: 0.3s;
+    }
+    .duration-300 {
+        transition-duration: 300ms;
+    }
+</style>

@@ -2,35 +2,52 @@
 import { Image } from 'astro:assets';
 
 interface Props {
-  linkText: string;
-  imageOne:string;
-  imageTwo:string;
+    linkText: string;
+    imageOne: string;
+    imageTwo: string;
+    imageThree: string;
 }
-const { linkText, imageOne, imageTwo } = Astro.props;
+const { linkText, imageOne, imageTwo, imageThree } = Astro.props;
 ---
 
 <section class="py-12">
-  <div class="grid grid-cols-2 p-4">
-    <div>
-      <h1 class="text-white text-5xl italic max-w-xs primaryText pb-8">Sobre nosotros</h1>
-      <p class="text-white max-w-sm">
-        Joaco entrenamientos ha sido fundada como un espacio para que las personas puedan entrenar y mejorar su salud física y mental.
-        Nuestros entrenadores están altamente capacitados y tienen años de experiencia en el campo del fitness.
-        Ofrecemos una amplia gama de servicios, desde entrenamientos personales hasta clases grupales.
-        Nuestro objetivo es ayudarte a alcanzar tus metas de fitness y mejorar tu calidad de vida.
-      </p>
-      <p class="text-white mt-8 underline">
-        <a href={linkText}>Learn more</a>
-      </p>
+    <div class="grid grid-cols-2 p-4">
+        <div>
+            <h1 class="text-white text-3xl italic max-w-xs primaryText pb-8">Sobre nosotros</h1>
+            <p class="text-white max-w-sm">
+                Joaco entrenamientos ha sido fundada como un espacio para que las personas puedan
+                entrenar y mejorar su salud física y mental. Nuestros entrenadores están altamente
+                capacitados y tienen años de experiencia en el campo del fitness. Ofrecemos una
+                amplia gama de servicios, desde entrenamientos personales hasta clases grupales.
+                Nuestro objetivo es ayudarte a alcanzar tus metas de fitness y mejorar tu calidad de
+                vida.
+            </p>
+            <p class="text-white mt-8 underline">
+                <a href={linkText}>Learn more</a>
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+            <Image
+                src={'/images/' + imageOne}
+                width={600}
+                height={600 / 1.5}
+                alt="Gym Instructor"
+                class="rounded-md object-cover w-48 col-span-full md:col-span-1"
+            />
+            <Image
+                src={'/images/' + imageTwo}
+                width={600}
+                height={600 / 1.5}
+                alt="Boxing Instructor"
+                class="rounded-md object-cover w-48 col-span-full md:col-span-1"
+            />
+            <Image
+                src={'/images/' + imageThree}
+                width={600}
+                height={600 / 1.5}
+                alt="skipping"
+                class="rounded-md object-cover w-48 col-span-full md:col-span-1 md:block hidden"
+            />
+        </div>
     </div>
-    <div class="grid grid-cols-2">
-        <Image src={'/images/'+imageOne} 
-        width={600} 
-        height={600/1.5} 
-        alt="Gym Instructor" 
-        class="rounded-md object-cover w-48"/>
-        <Image src={'/images/'+imageTwo}
-         width={600} height={600/1.5} alt="Boxing Instructor" class="rounded-md object-cover w-48 pt-8"/>
-    </div>
-  </div>
 </section>
