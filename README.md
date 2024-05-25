@@ -46,3 +46,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |).
+
+
+## Para Nacho
+Luego de que instales npm, corre `npm install` en la carpeta para instalar las dependencias. Luego, corre `npm run dev` para correr el proyecto en tu localhost.
